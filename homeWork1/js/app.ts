@@ -42,5 +42,5 @@ function fibonacchi(num: number): any {
         return rezult
     }
 }
-console.log(fibonacchi(8));
+console.log(fibonacchi(9));
 
