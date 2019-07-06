@@ -11,28 +11,37 @@ var arr = [1, true, 'str'];
 function factorial(num) {
     var rezult = num;
     if (num < 0) {
-        return console.log('err');
-    } else {
+        return "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E";
+    }
+    else if (num === 0) {
+        return rezult = 1;
+    }
+    else {
         for (var i = rezult - 1; i >= 1; i--) {
             rezult *= i;
-        };
-    };
+        }
+        ;
+    }
+    ;
     return rezult;
-};
-console.log(factorial(5));
+}
+;
+console.log(factorial(10));
 // Написать функцию принимающую число и 
 //возврашающую массив с числами фибоначи до этого порядкового числа
 function fibonacchi(num) {
     var rezult = [0, 1];
     if (num <= 0) {
-        return console.log('err');
-    } else if (num <= 2) {
+        return "\u041D\u0435\u0432\u0435\u0440\u043D\u043E\u0435 \u0447\u0438\u0441\u043B\u043E";
+    }
+    else if (num <= 2) {
         return rezult.slice(0, num);
-    } else {
+    }
+    else {
         for (var i = 2; i < num; i++) {
             rezult.push(rezult[rezult.length - 1] + rezult[rezult.length - 2]);
         }
         return rezult;
     }
 }
-console.log(fibonacchi(8));
+console.log(fibonacchi(-1));

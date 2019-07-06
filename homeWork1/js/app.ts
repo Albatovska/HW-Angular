@@ -14,8 +14,12 @@ const arr: [number, boolean, string] = [1, true, 'str'];
 function factorial(num: number): any{
     let rezult: number = num;
     if( num < 0){
-        return console.log('err')
-    } else {
+        return `Неверное число`
+    } else
+     if (num === 0){
+        return rezult = 1;
+    }
+    else {
         for (let i: number = rezult - 1; i >= 1; i--){
         rezult *= i;
       };
@@ -23,7 +27,7 @@ function factorial(num: number): any{
     return rezult
 };
 
-console.log(factorial(5));
+console.log(factorial(10));
 
 // Написать функцию принимающую число и 
 //возврашающую массив с числами фибоначи до этого порядкового числа
@@ -31,7 +35,7 @@ console.log(factorial(5));
 function fibonacchi(num: number): any {
     let rezult: number[] = [0, 1];
     if( num <= 0){
-        return console.log('err')
+        return `Неверное число`
     } else
     if (num <= 2) {
         return rezult.slice(0, num);
@@ -42,5 +46,5 @@ function fibonacchi(num: number): any {
         return rezult
     }
 }
-console.log(fibonacchi(9));
+console.log(fibonacchi(-1));
 
