@@ -20,7 +20,7 @@ const toBinary = new ToBinary();
 console.log('dec -> bin: ', toBinary.toSystem(68));
 console.log('bin -> dec: ', toBinary.fromSystem('1000100'));
 
-class ToHex {
+class ToHex implements Converter {
     toSystem(num: number):string {
     // dec -> hex   восмеричнав - десятиричная
     return num.toString(8);
@@ -35,7 +35,7 @@ const toHex = new ToHex();
 console.log('dec -> hex: ', toHex.toSystem(18));
 console.log('hex -> dec: ', toHex.fromSystem('22'));
 
-class ToHexDec {
+class ToHexDec implements Converter {
     toSystem(num: number): string {
     // dec -> hexDex    десятиричная - шестнацатиричная
      return num.toString(16);
