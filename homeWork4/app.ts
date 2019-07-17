@@ -1,5 +1,6 @@
-const { Observable: { create }, range, interval } = require('rxjs');
-const {reduce, bufferCount, bufferTime, merge}= require('rxjs/operators');
+const { Observable: { create }, range, interval, timer} = require('rxjs');
+const {reduce, bufferCount, bufferTime, buffer, merge}= require('rxjs/operators');
+
 //1. Имплементировать функцилнал range используя функцию create.
 /* const publisher = create((observable) => {
     let i = 3;
@@ -25,7 +26,7 @@ const {reduce, bufferCount, bufferTime, merge}= require('rxjs/operators');
 });
  */
 //3. Используя тольк reduce иммплементировать функционал filter.
- /* const publisher = range (0, 100)
+/* /*  const publisher = range (0, 100)
  .pipe(reduce((acc, val) => {
 
   if(val % 3 === 0 ) {
@@ -39,17 +40,16 @@ const {reduce, bufferCount, bufferTime, merge}= require('rxjs/operators');
   
  }, 10))
 
- */
 
+ */
 
 //4. Дан обзервабле interval - 1 tick in 50 msec -> выдавать данные либо 1 раз в 333 сек или же когда накапливается 7 элементов.
 
 
-const publisher1 = interval(100).pipe(bufferTime(333))
-    
-const publisher2 = interval(100).pipe(bufferCount(7))
+//const publisher = timer(50, 1)
+ const publisher = timer(50, 1)
+.pipe(bufferTime(333, 1, 7))
 
-const publisher = publisher1.pipe(merge(publisher2))
 
 const subscriber = publisher.subscribe(
     (val) => {
@@ -64,4 +64,4 @@ const subscriber = publisher.subscribe(
     }
     );
     setTimeout(() => subscriber.unsubscribe(), 5000);
- 
+  
