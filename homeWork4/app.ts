@@ -26,11 +26,11 @@ const {reduce, bufferCount, bufferTime, buffer, merge}= require('rxjs/operators'
 });
  */
 //3. Используя тольк reduce иммплементировать функционал filter.
-/* /*  const publisher = range (0, 100)
+  const publisher = range (0, 100)
  .pipe(reduce((acc, val) => {
 
   if(val % 3 === 0 ) {
-       acc = val; 
+       acc += val; 
     console.log(acc)
        
    }
@@ -41,13 +41,13 @@ const {reduce, bufferCount, bufferTime, buffer, merge}= require('rxjs/operators'
  }, 10))
 
 
- */
+ 
 
 //4. Дан обзервабле interval - 1 tick in 50 msec -> выдавать данные либо 1 раз в 333 сек или же когда накапливается 7 элементов.
 
- const publisher = timer(50, 1)
+ /* const publisher = timer(50, 1)
 .pipe(bufferTime(333, 1, 7))
-
+ */
 const subscriber = publisher.subscribe(
     (val) => {
         console.log(`This is observable value: ${val}`);
