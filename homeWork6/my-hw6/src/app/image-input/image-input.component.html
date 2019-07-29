@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <h2>Задание 1</h2>
+    <div class="inputImgUrl">
+        <input (usr)="readProperty($event)" [(ngModel)]='srcImg' placeholder=" Введите ссылку" />
+    </div>
+    <br>
+    <div class="picture">
+        <img src={{srcImg}} alt="">
+    </div>
+
+</div>
