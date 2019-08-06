@@ -3,7 +3,6 @@
     <h1>
         {{ title }}!
     </h1>
-    <app-image-input></app-image-input>
-    <app-selected-img></app-selected-img>
-    <app-big-selected-img></app-big-selected-img>
+    <app-selected-img [selectImageUrl]="selectImageUrl"></app-selected-img>
+    <app-gallery [images]='images' (selectImage)='readProperty($event)'></app-gallery>
 </div>
