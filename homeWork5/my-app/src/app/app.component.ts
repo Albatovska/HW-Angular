@@ -1,3 +1,4 @@
+
 import { Component, ViewChild, ContentChildren } from '@angular/core';
 import { fromEvent} from 'rxjs';
 
@@ -19,5 +20,4 @@ export class AppComponent {
     }
   }
  }
-
 
