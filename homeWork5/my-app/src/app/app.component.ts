@@ -8,7 +8,7 @@ import { fromEvent} from 'rxjs';
  })
 
 export class AppComponent {
-   title = 'GalleryAngular';
+  public title = 'GalleryAngular';
   private count:number = 0;
   public click(): void {
     fromEvent(document, 'click');

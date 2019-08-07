@@ -27,7 +27,6 @@ public images: ImagesInterface[] = [
 ];
 
 public visibleImage = this.images[0].url;
-
 }
 export interface ImagesInterface {
   url: string;
