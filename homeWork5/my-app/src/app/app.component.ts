@@ -8,14 +8,14 @@ import { fromEvent} from 'rxjs';
  })
 
 export class AppComponent {
-  public count:number = 0;
+   title = 'GalleryAngular';
+  private count:number = 0;
   public click(): void {
     fromEvent(document, 'click');
-     this.count++
-    
-     if(this.count===4){
-      this.count = 0
-      alert('Пора в отпуск')
+    this.count++;
+    if (this.count === 4) {
+      this.count = 0;
+      alert('Пора в отпуск');
     }
   }
  }
