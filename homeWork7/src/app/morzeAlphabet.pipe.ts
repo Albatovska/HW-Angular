@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: 'ConvertToMorse',
-       pure: false
+    name: 'ConvertToMorse'
     })
 
 export class ConvertToMorse implements PipeTransform {
