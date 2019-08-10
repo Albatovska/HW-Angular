@@ -13,7 +13,6 @@ import { GalleryComponent } from './gallery/gallery.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
