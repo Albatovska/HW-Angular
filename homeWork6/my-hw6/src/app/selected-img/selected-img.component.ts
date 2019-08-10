@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { fromEvent } from 'rxjs';
 
 @Component({
@@ -6,14 +6,8 @@ import { fromEvent } from 'rxjs';
   templateUrl: './selected-img.component.html',
   styleUrls: ['./selected-img.component.css']
 })
-export class SelectedImgComponent implements OnInit {
- public urlImgclick: string = '';
-   ngOnInit() {
-     const imgEventlistener = fromEvent(document.querySelector(".pictureList"), 'click');
-    imgEventlistener.subscribe(
-      (event: any) => {
-        this.urlImgclick = event.path[0].currentSrc;
-      })
-  }
 
-}
+export class SelectedImgComponent {
+  @Input()
+  public selectImageUrl;
+  }
