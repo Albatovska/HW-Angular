@@ -7,14 +7,14 @@ export default function reducer(state = initialState, action: any) {
    switch (action.type) {
     case INCREMENT:
         if (state.counter !== 21) {
-        return state = {counter: state.counter++ };
+        return state = {counter: state.counter + action.payload };
     } else {
         return state = {counter: state.counter };
     }
 
     case DECREMENT:
         if (state.counter !== -9) {
-       return state = {counter: state.counter-- };
+       return state = {counter: state.counter - action.payload };
         } else {
         return state = {counter: state.counter };
         }
