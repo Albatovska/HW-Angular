@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from '../service';
+import { Card } from '../types';
 
 @Component({
   selector: 'app-gallery',
@@ -7,14 +8,13 @@ import { Service } from '../service';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  public arrayDataCards: Array<string>;
+  public arrayDataCards: Array<Card>;
 
   constructor(private service: Service) { }
 
  ngOnInit(): void {
-    this.service.arrayData.subscribe((val) => {
+    this.service.arrayData.subscribe((val: Array<Card>) => {
       this.arrayDataCards = val;
-      console.log(this.arrayDataCards);
     });
  }
 }
