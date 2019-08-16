@@ -1,0 +1,11 @@
+input {
+    outline: none;
+    margin: 20px auto;
+    width: 600px;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    margin: 15px;
+}
