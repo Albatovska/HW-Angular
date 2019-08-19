@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'homeWork10';
-   public imgGallary;
-  public imgArray(event) {
+   public imgGallary: string;
+  public imgArray(event): void {
     this.imgGallary = event;
   }
-
-  ngOnInit(): void { }
 }

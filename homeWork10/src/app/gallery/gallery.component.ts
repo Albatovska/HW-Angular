@@ -10,21 +10,20 @@ export class GalleryComponent implements OnInit {
 constructor(private service: Service) { }
 
 
-  public arrayImg = [];
-  public value;
-  public date;
-  @Output() event = new EventEmitter();
+  public arrayImg: any = [];
+  public value: string;
+  public date: number;
+  @Output() event = new EventEmitter<any>();
 
 
-
-  ngOnInit() {
+  ngOnInit(): void {
     this.service.dateImg.subscribe(
       (val) => {
         this.date = val;
       }
     );
   }
-  addImg() {
+  addImg(): void {
     // tslint:disable-next-line: no-bitwise
     if (~this.value.indexOf('https://') || ~this.value.indexOf('http://')) {
       this.arrayImg.push({ url: this.value, date: this.date });
