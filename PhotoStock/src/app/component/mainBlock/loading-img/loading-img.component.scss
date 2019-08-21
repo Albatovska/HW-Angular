@@ -1,0 +1,32 @@
+.input-field {
+    display: block;
+    color: #575656;
+}
+
+form {
+    margin-left: 0;
+}
+
+#Name {
+    width: 230px;
+    text-align: center;
+    border-color: #969494;
+}
+
+.loading-container {
+    display: inline-block;
+}
+
+button {
+    background-color: grey;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #424141
+}
+
+#Name:active {
+    border-color: #111111;
+    color: #111111;
+}

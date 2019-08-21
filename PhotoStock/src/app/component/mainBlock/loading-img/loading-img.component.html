@@ -1,0 +1,24 @@
+<div class="loading-container">
+    <div class="row">
+        <form class="col left">
+            <div class="left">
+                <div class="input-field col s12 l3">
+                    <input [(ngModel)]="nameCard" [ngModelOptions]="{standalone: true}" id="Name" class="validate left" placeholder="Название фото">
+                </div>
+                <div class="input-field col s12 ">
+                    <img [src]="this.urlData" height="150px" alt="">
+                </div>
+                <div class="input-field ">
+                    <input type="file" (change)="file($event)" id="input-loading" class="validate left">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        <div class="col s12">
+            <div class="left">
+                <button (click)="handler()" class="waves-effect waves-light btn">Добавить фото</button>
+            </div>
+        </div>
+    </div>
+</div>
