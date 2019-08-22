@@ -4,6 +4,10 @@ body {
     background: url(./img/fler_fon_62.jpg);
 }
 
+i {
+    font-family: fontawesome !important;
+}
+
 ::-webkit-scrollbar {
     /* chrome based */
     width: 0px;

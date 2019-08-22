@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { Service} from './component/service';
 import { AppComponent } from './app.component';
@@ -17,7 +18,8 @@ import { GalleryComponent } from './component/mainBlock/gallery/gallery.componen
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AngularFontAwesomeModule
   ],
   providers: [ Service ],
   bootstrap: [AppComponent]

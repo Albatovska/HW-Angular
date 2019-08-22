@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { Service } from '../../service';
 import { Card } from '../../../models/cardsPhoto';
 
-
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.scss']
+  styleUrls: ['./gallery.component.scss',
+    '../../../../../node_modules/font-awesome/css/font-awesome.css'
+  ]
 })
 export class GalleryComponent implements OnInit {
  public arrayDataCards: Array<Card>;

@@ -5,7 +5,7 @@ import { Card } from '../../../models/cardsPhoto';
 @Component({
   selector: 'app-loading-img',
   templateUrl: './loading-img.component.html',
-  styleUrls: ['./loading-img.component.scss']
+  styleUrls: [ './loading-img.component.scss']
 })
 export class LoadingImgComponent {
 
