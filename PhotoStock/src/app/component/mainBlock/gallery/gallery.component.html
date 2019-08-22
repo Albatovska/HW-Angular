@@ -1,0 +1,25 @@
+<div class="container centre">
+    <div class="row centre">
+        <div class="col">
+            <div class="card col s11 m10 l5 offset-l1 offset-m1 offset-s1" *ngFor="let item of arrayDataCards; let i = index">
+                <div class="card-image">
+                    <img (click)="imgCkick(item.url || item.urlData)" [src]="item.url || item.urlData" style="cursor: pointer;">
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{ item.name }}</span>
+                </div>
+                <div class="card-content" style="display: flex; justify-content:space-between;">
+                    <a #likeBtn (click)="like(i)" class="noselect" style="cursor: pointer; font-size: 20px;"><i class="far fa-thumbs-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        [class.d-none]="!isShowPopup"
+        class="popupImage"
+    >
+        <div class="blockImg"><img [src]="urlImg" alt=""></div>
+        <!--  <div class="blockTitle"><span class="block-title">{{ item.name }}</span></div> -->
+        <button class="closeImg" (click)="close()">Закрыть</button>
+    </div>
+</div>
