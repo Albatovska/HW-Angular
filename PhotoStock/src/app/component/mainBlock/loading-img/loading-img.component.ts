@@ -35,7 +35,7 @@ export class LoadingImgComponent {
             url: this.urlCard,
             urlData: this.urlData
         };
-
+        
         store.dispatch({
             type: ADD,
             payload: objectCard
